@@ -24,7 +24,6 @@ async function run() {
 
         const db = client.db('musicTrack');
         const collection = db.collection('musics');
-        const supplies = db.collection('supplies');
 
         // User Registration
         app.post('/api/v1/register', async (req, res) => {
@@ -76,6 +75,7 @@ async function run() {
                 token
             });
         });
+
 
         // Start the server
         app.listen(port, () => {
